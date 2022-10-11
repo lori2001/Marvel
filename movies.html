@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>A Filmekrõl</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Marvel Filmek" />
+    <meta name="author" content="Szőke András-Loránd" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">Marvel Filmek</h1>
+      <nav id="navigation">
+        <a href="./index.html">Otthon</a>
+        <a class="active-a" href="./movies.html">A Filmekrõl</a>
+        <a href="./info.html">Infórmációk</a>
+        <a
+          style="margin-left: auto"
+          href="https://www.marvel.com/"
+          target="_blank"
+          >Hivatalos Oldal</a
+        >
+      </nav>
+    </header>
+
+    <main id="movies">
+      <div class="films-table">
+        <div>
+          <h2>Filmek Táblázata</h2>
+          <p class="intro-p">
+            Itt látható egy táblázat néhány Marvel filmel, melyeket bemutatok
+            ezen az oldalon. A filmek nevére kattintva megtalálhatod õket az
+            oldalon.
+          </p>
+        </div>
+        <table>
+          <tr>
+            <th>Elsõ Kiadás</th>
+            <th>Film</th>
+            <th>IMDB Link</th>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td><a href="#ironman">Vasember</a></td>
+            <td>
+              <a
+                href="https://www.imdb.com/title/tt0371746/?ref_=fn_al_tt_1"
+                target="_blank"
+                >Link</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>2011</td>
+            <td><a href="#captainamerica">Amerikai Kapitány</a></td>
+            <td>
+              <a
+                href="https://www.imdb.com/title/tt0458339/?ref_=nv_sr_srsg_3"
+                target="_blank"
+                >Link</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>2011</td>
+            <td><a href="#thor">Thor</a></td>
+            <td>
+              <a
+                href="https://www.imdb.com/title/tt0800369/?ref_=fn_al_tt_1"
+                target="_blank"
+                >Link</a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <article class="movie" id="ironman">
+        <h2>Vasember</h2>
+        <h3>(Iron Man)</h3>
+
+        <div class="content">
+          <section>
+            <h4>Mirõl szól?</h4>
+            <p class="movie-p">
+              Tony Starkot, a milliárdos fegyvergyárost terroristák ejtik
+              foglyul Afganisztánban. Rakéta összeszerelésére kényszerítik,
+              azonban Stark a rendelkezésre álló eszközökből páncélzatot épít
+              magának a szökéshez. A fogságban szembesül a saját cége
+              gyártmányai okozta pusztítással. Amerikába visszatérve
+              továbbfejleszti művét, s a technológiára támaszkodó szuperhős,
+              Vasember válik belőle, aki az ellen kezd harcolni, aminek azelőtt
+              maga is vezető képviselője volt.
+            </p>
+          </section>
+
+          <!-- TODO: Use a better way to show poster on-click -->
+          <div class="posters">
+            <a href="./assets/images/ironman1.jpg" target="_blank">
+              <img alt="Iron Man I Poster" src="./assets/images/ironman1.jpg" />
+            </a>
+            <a href="./assets/images/ironman2.jpg" target="_blank">
+              <img
+                alt="Iron Man II Poster"
+                src="./assets/images/ironman2.jpg"
+              />
+            </a>
+            <a href="./assets/images/ironman3.jpg" target="_blank">
+              <img
+                alt="Iron Man III Poster"
+                src="./assets/images/ironman3.jpg"
+              />
+            </a>
+          </div>
+
+          <section>
+            <h4>Vélemények</h4>
+            <p class="movie-p">
+              Ez volt az elsõ film a Marvel világában, ezért mindíg különleges
+              lesz számomra. Nagyon bejön Robert Downey Jr.. Karizmatikus és
+              vicces, és nagyon jól talál a szerepbe.<br />
+              A filmek:
+            </p>
+            <ol>
+              <li>Vasember I</li>
+              <li>Vasember II</li>
+              <li>Vasember III</li>
+            </ol>
+          </section>
+        </div>
+      </article>
+
+      <article class="movie" id="captainamerica">
+        <h2>Amerika Kapitány</h2>
+        <h3>(Captain America)</h3>
+
+        <div class="content">
+          <section>
+            <h4>Mirõl szól?</h4>
+            <p class="movie-p">
+              Amerika Kapitány Joe Simon író és Jack Kirby rajzoló kitalált
+              szereplője, szuperhős a Marvel Comics képregényeiben. Első
+              megjelenése az amerikai kiadó elődje, a Timely Comics Captain
+              America Comics nevű füzetének első számában, 1940 decemberében
+              volt. A szereplő visszatérő kísérő jelzői közé tartozik „a
+              csillagos-sávos bosszúálló” és „a szabadság őrzője”. Amerika
+              Kapitány titkos személyazonossága Steve Rogers, aki az 1940-es
+              évek elején jelentkezett szolgálatra az Egyesült Államok
+              hadseregébe, hogy hazáját szolgálva a tengelyhatalmak ellen
+              harcoljon.
+            </p>
+          </section>
+
+          <div class="posters">
+            <a href="./assets/images/captainamerica1.jpg" target="_blank">
+              <img
+                alt="Captain America I Poster"
+                src="./assets/images/captainamerica1.jpg"
+              />
+            </a>
+            <a href="./assets/images/captainamerica2.jpg" target="_blank">
+              <img
+                alt="Captain America II Poster"
+                src="./assets/images/captainamerica2.jpg"
+              />
+            </a>
+            <a href="./assets/images/captainamerica3.jpg" target="_blank">
+              <img
+                alt="Captain America III Poster"
+                src="./assets/images/captainamerica3.jpg"
+              />
+            </a>
+          </div>
+
+          <section>
+            <h4>Vélemények</h4>
+            <p class="movie-p">
+              Jó filmsorozat. Elõszõr kevésbé szerettem a karaktert. Túl
+              tökéletes volt. Aztán idõvel nem csak fel hanem szívhez is nõ.
+              <br />
+              A filmek:
+            </p>
+            <ol>
+              <li>Amerika Kapitány: Az első bosszúálló</li>
+              <li>Amerika Kapitány: A tél katonája</li>
+              <li>Amerika Kapitány: Polgárháború</li>
+            </ol>
+          </section>
+        </div>
+      </article>
+
+      <article class="movie" id="thor">
+        <h2>Thor</h2>
+        <h3>(Thor)</h3>
+
+        <div class="content">
+          <section>
+            <h4>Mirõl szól?</h4>
+            <p class="movie-p">
+              Kr.u. 965-ben Odin (Anthony Hopkins), Asgard királya háborút visel
+              a jégóriások ellen, akik mind a kilenc birodalmat el akarják
+              foglalni (elsőnek a Földet akarják leigázni). Az asgardiaknak
+              sikerül visszaszorítaniuk a jégóriásokat a saját birodalmukba, és
+              hatalmuk forrását, az „ősi teleket” egy ércládikóba zárják, amit a
+              páncélteremben őriznek.
+            </p>
+          </section>
+
+          <div class="posters">
+            <a href="./assets/images/thor1.jpg" target="_blank">
+              <img alt="Thor I Poster" src="./assets/images/thor1.jpg" />
+            </a>
+            <a href="./assets/images/thor2.jpg" target="_blank">
+              <img alt="Thor II Poster" src="./assets/images/thor2.jpg" />
+            </a>
+            <a href="./assets/images/thor3.jpg" target="_blank">
+              <img alt="Thor III Poster" src="./assets/images/thor3.jpg" />
+            </a>
+          </div>
+
+          <section>
+            <h4>Vélemények</h4>
+            <p class="movie-p">
+              Ezt a filmet (úgy mint sok más ember), nem szerettem annyira
+              egésszen a harmadik részig. A Ragnarokkal, viszont, Taka Waititi
+              új életet lehelt e haldokló szuperhõs-filmbe.
+              <br />
+              A filmek:
+            </p>
+            <ol>
+              <li>Thor</li>
+              <li>Thor: Sötét világ</li>
+              <li>Thor: Ragnarok</li>
+            </ol>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      ©copyrights Szőke András-Loránd
+      <a href="https://www.lorand.eu/" target="_blank">www.lorand.eu</a>
+    </footer>
+  </body>
+</html>

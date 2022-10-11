@@ -1,0 +1,362 @@
+/* ---------------- COMMON START ----------------- */
+@font-face {
+  font-family: MarvelFont;
+  src: url("./assets/fonts/marvel2.otf");
+}
+@font-face {
+  font-family: ThorFont;
+  src: url("./assets/fonts/ThorRagnarok.ttf");
+}
+@font-face {
+  font-family: CaptainAmericaFont;
+  src: url("./assets/fonts/AmericanCaptain.otf");
+}
+@font-face {
+  font-family: IronManFont;
+  src: url("./assets/fonts/IronMan.ttf");
+}
+
+:root {
+  --primary: #ec1d24; /* marvel-red */
+  /*--p-highlight: #ff4e53;*/
+
+  --secondary: #4c7eda;
+  --s-highlight: #689dff;
+  --s-shadow: #33528b;
+
+  /*--tertiary: #6b0cb8;*/
+
+  --background: #110425;
+  --transparent-bg: #070518d9;
+
+  --black: black;
+  --white: white;
+  --whitesmoke: white;
+
+  --scrollbar-bg: #070518;
+  --thumb-bg: #33528b;
+
+  --glow-int: #fdf6e6;
+  --glow-ext1: #ffff4b;
+  --glow-ext2: #ffff7e;
+
+  --MarvelFont: MarvelFont, Arial, Helvetica, sans-serif;
+  --ThorFont: ThorFont, MarvelFont, Arial, Helvetica;
+  --CaptainAmericaFont: CaptainAmericaFont, MarvelFont, Arial, Helvetica;
+  --IronManFont: IronManFont, MarvelFont, Arial, Helvetica;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  /*Change ugly scroll color and shape on firefox(and other browsers)*/
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumb-bg) var(--scrollbar-bg);
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white);
+}
+
+body {
+  background-color: var(--background);
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-bg);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbar-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--primary);
+}
+.hover-col-white:hover {
+  color: var(--white);
+}
+.active-a {
+  color: var(--primary);
+}
+
+main {
+  padding: 20px 80px;
+}
+
+/* ---------------- COMMON END ----------------- */
+
+/* ---------------- HEADER START ----------------- */
+header {
+  background-color: var(--transparent-bg);
+  padding: 5px 15px;
+
+  position: relative;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  text-transform: uppercase;
+}
+header * {
+  font-family: var(--MarvelFont);
+}
+header a,
+header h1 {
+  z-index: 20;
+}
+
+.title {
+  font-size: 2rem;
+  background-color: var(--primary);
+  margin: 0;
+  margin-right: 15px;
+  padding: 12px;
+  white-space: nowrap;
+}
+#navigation {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+#navigation > a {
+  font-size: 2rem;
+  margin: 0 15px;
+}
+/* ---------------- HEADER END ----------------- */
+
+/* ---------------- FOOTER START ----------------- */
+footer {
+  background-color: var(--transparent-bg);
+  padding: 12px 30px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .copyrights,
+footer a {
+  z-index: 20;
+}
+footer a {
+  font-weight: bold;
+  color: var(--white);
+}
+footer a:hover {
+  color: var(--primary);
+}
+/* ---------------- FOOTER END ----------------- */
+
+/* ---------------- MOVIES START ----------------- */
+#movies {
+  padding-top: 30px;
+}
+
+#movies .films-table {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 10%;
+}
+
+/*--- 1.5.8 ---*/
+#movies .films-table td,
+#movies .films-table th {
+  border: 3px solid #dddddd;
+  margin: 0;
+  text-align: center;
+  padding: 8px;
+}
+#movies .films-table tr:nth-child(even) {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+/*--- 1.5.3 ---*/
+#movies .intro-p {
+  font-size: larger;
+
+  /*--- 1.5.7 ---*/
+  border: 5px double var(--whitesmoke);
+  padding: 10px;
+}
+#movies .movie-p {
+  width: 100%;
+}
+
+#movies .movie h2,
+#movies .movie h3 {
+  font-family: var(--MarvelFont); /*TODO: CHANGE*/
+  font-size: 2rem;
+  margin: 6px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+#movies .movie h4 {
+  font-size: larger;
+  font-weight: bold;
+}
+#movies .movie {
+  margin: 50px 0;
+  padding-top: 8px;
+  background-color: var(--transparent-bg);
+}
+
+#movies .movie .content {
+  margin-top: 15px;
+  padding: 10px 0;
+  background-color: var(--s-shadow);
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+#movies .movie .content section {
+  padding: 30px;
+}
+#movies .movie .posters {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+}
+#movies .movie a,
+#movies .movie img {
+  width: 100%;
+  height: auto;
+  align-self: center;
+
+  transition: transform 0.6s;
+}
+#movies .movie a img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#movies .movie#ironman h2,
+#movies .movie#ironman h3 {
+  font-family: var(--IronManFont);
+}
+#movies .movie#captainamerica h2,
+#movies .movie#captainamerica h3 {
+  font-family: var(--CaptainAmericaFont);
+}
+#movies .movie#thor h2,
+#movies .movie#thor h3 {
+  font-family: var(--ThorFont);
+}
+
+/* ---------------- MOVIES END ----------------- */
+
+/* ---------------- HOME START ----------------- */
+#home {
+  padding: 0;
+}
+#home .main-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#home .main-bg .bgvid {
+  position: absolute;
+}
+#home .main-bg .heroes {
+  z-index: 10;
+}
+#home .main-bg .bgvid,
+#home .main-bg .heroes {
+  width: 100%;
+  min-height: 100%;
+  max-height: 135%;
+}
+#home .main-bg .hero {
+  fill: transparent;
+  stroke: #f3b77f;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 6px;
+  fill-rule: evenodd;
+
+  animation: glow 1.5s ease-in-out infinite alternate;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+#home .main-bg .hero:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+/* ---------------- HOME END ----------------- */
+
+/* ---------------- INFO START ----------------- */
+#info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#info section {
+  width: 55%;
+  margin-right: 5%;
+}
+#info embed {
+  width: 600px;
+  height: 350px;
+}
+#info .description {
+  padding: 20px;
+  background-color: var(--transparent-bg);
+}
+/* ---------------- INFO END ----------------- */
+
+/*----- UTILS ----- */
+@keyframes flyIn {
+  from {
+    transform: scale(0.4) rotate3d(1, 0.3, 0.2, 70deg);
+  }
+
+  to {
+    transform: scale(1) rotate3d(1, 1, 1, 0);
+  }
+}
+.fly-in-anim {
+  animation: flyIn 0.7s;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px #ff6d1f);
+  }
+
+  to {
+    filter: drop-shadow(0 0 7px #ffff20);
+  }
+}
+
+.no-bg-col {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
